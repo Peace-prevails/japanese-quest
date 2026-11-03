@@ -1,0 +1,584 @@
+{
+  "clips": [
+    {
+      "role": "narrator",
+      "text": "東京に着きました。",
+      "audio": "audio/5226d3d087134289e621985dbef82fb158dfdb20be6c763e444b31ac734426a8.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "すみません、会社はどこですか？",
+      "audio": "audio/6518b95c44dc8288ab488ddd4671ecb4841acf0f8b7dcd3531de1c18265af0ac.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "あ、電池が切れた。",
+      "audio": "audio/b155e0da54aa5bbdf5f7138a6ed6d8e2d5dbcb0517e83f78f833f875ee4ed4f6.mp3"
+    },
+    {
+      "role": "passerby",
+      "text": "まっすぐ行って、右です。",
+      "audio": "audio/14dd7b3d1a023a6ef319e3d3fb26a77560f7d90c355b4c12ae715f00849b3dc3.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "ありがとうございます。",
+      "audio": "audio/0a65e5bb04b4104eae57038b10ddacfccfb4cbb4d974739f35e0ad71408fe06e.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "わかりません。",
+      "audio": "audio/bc73504f189118e20b97812c186ea3997ac222224a208d6493de2783b58f61d7.mp3"
+    },
+    {
+      "role": "passerby",
+      "text": "まっすぐ。右。",
+      "audio": "audio/41e3a462933731bc54eb553f357355248c6c87c19994f4e85270e7229585b18f.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "会社が見えました。",
+      "audio": "audio/9c42230856718b7c68aed9f94b68b8c2fba7136f6a8134ef30d3d776cdd800e8.mp3"
+    },
+    {
+      "role": "aoi",
+      "text": "あ、はじめまして！高橋葵です。",
+      "audio": "audio/229053642f5b175a9cdf28e280f7ac57f668c679ceb07f301ba48028fb48bd2d.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "はじめまして。よろしくお願いします。",
+      "audio": "audio/35346166a8da59c3d8a8e4dfdc76a07886493f0ff0d4aa13c00d7ee18b9ae3d0.mp3"
+    },
+    {
+      "role": "aoi",
+      "text": "よろしくお願いします！日本は初めてですか？",
+      "audio": "audio/7869279144a020410c86e21e4822940dafb3d2e29c017c19a6174412720093b1.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "はい、初めてです。",
+      "audio": "audio/d9784b116034fed1fe230912908844105dbf81a981b614297779907438c1918c.mp3"
+    },
+    {
+      "role": "aoi",
+      "text": "日本は、初めて？",
+      "audio": "audio/53d9a2e77216174042f78b6117e0e4cee9020c37f86b68d5b8ab70fdf88322b5.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "はい。",
+      "audio": "audio/1b283b58593820c36b81084405f531510cfc6adca78e793e9d7802fa6fb814cb.mp3"
+    },
+    {
+      "role": "toudou",
+      "text": "ああ、小光さん。よく来てくれました。私は藤堂です。",
+      "audio": "audio/8baed5ca417d8832cb7a484dd178d19a1050f5bf0e613f58091e53be260b4afe.mp3"
+    },
+    {
+      "role": "toudou",
+      "text": "こちらが、今回の AI 広告プロジェクトです。",
+      "audio": "audio/2b9ecc2e025fec42f213ad07d8b39bec89095b14d25908540c2bc7a0f52bdcd9.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "見せてください。",
+      "audio": "audio/eb09c3612be20547ec138a71ecb27b815fed5d305768961593ad243f49ecd8ff.mp3"
+    },
+    {
+      "role": "aoi",
+      "text": "私、高橋がサポートします！よろしくお願いします。",
+      "audio": "audio/f79164569131600caa446ac0c01526ff426c5ef0264c571821830bc328cd077b.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "よろしくお願いします。",
+      "audio": "audio/9162a206656278ccb9fe226cb6b97f0db19ef8020b5a9bdc37ae776e522d5ab4.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "こうして、東京での仕事が始まった。",
+      "audio": "audio/16e478a05255f29a349fd9cd328fbcb5284d41e01200218e1e5fed808f76c5f2.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "プロジェクトの説明が始まった。",
+      "audio": "audio/562e181ee0f14af34e6d3aa5fc15357389dd1f84cd636ba01799f1103c597881.mp3"
+    },
+    {
+      "role": "toudou",
+      "text": "AI 広告。作る。",
+      "audio": "audio/d290a2bb9e50c467c81634ffe96f4294b9516165c8194221feffc6064df847e6.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "なるほど。",
+      "audio": "audio/01eb14f68f4ed0ce150866e67b91703e584e1ffdd13619fc1c347fd6d273f7b4.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "「絆」は、あなたが作った AI 広告アシスタントだ。",
+      "audio": "audio/f0fa05b3e9245732694eecffed2ef62182ce86f955cfbded7f48e88702fbc5a7.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "デモを見せます。",
+      "audio": "audio/bf5831cdd1ba38fe7aef172ba5d2ba7bc28bcf3a89d184ac5a7068c7a4d2b28c.mp3"
+    },
+    {
+      "role": "aoi",
+      "text": "小光さんが作ったアシスタントです。すごいんです！",
+      "audio": "audio/cf760c057baee4de5e03657292f1f1eb6c582d7cabeee401cbe1cc3ba10f9fc5.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "「絆」が広告を作った。画面の隅に、五枚の花びら。",
+      "audio": "audio/b4dd771cfafbb831847ce44b855f71d2383b5a5ea62b6ff69e28689ee0b4d0a1.mp3"
+    },
+    {
+      "role": "toudou",
+      "text": "素晴らしい。さすがですね。",
+      "audio": "audio/2c84e3fce05ee04e64fa1aefd3e54306ae178c9ef3bbc5a34429e55fdcf8bd15.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "いいえ。",
+      "audio": "audio/ea29ad713bdc5061d560d7a88848fcf2b97d9475487df4205fea0b3ba4fdb57f.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "会議が終わった。だが、何かが引っかかる。",
+      "audio": "audio/21fd757d02a1980a3d474fa1fb7060031b21adcdb1733a706b58e60106539dd0.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "歓迎会。居酒屋に来た。",
+      "audio": "audio/5ef0a11f93354e499aa0c40e86e4799d8c612ff5e98d1132ec409eb8b6c87bd0.mp3"
+    },
+    {
+      "role": "aoi",
+      "text": "何を飲みますか？",
+      "audio": "audio/c788c2b4d4c26238750609beb7141b658b006fdd0d7d141f41a77443a6610dc3.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "ビールをください。",
+      "audio": "audio/22a7b221532c193b205b88f50849ba3ee944ca9ede546ccbbae31d8e2ce4ce41.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "ウーロン茶をください。",
+      "audio": "audio/b126caf680963fdad7c94898413184a90284f37c64b2285727e831ad9eb2b563.mp3"
+    },
+    {
+      "role": "aoi",
+      "text": "ビール？お茶？",
+      "audio": "audio/3cb5a789803175fec02f3ffb0ba4cfe5d47185185f93aff58539b00453a41a65.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "ビール。",
+      "audio": "audio/deeb00dab0afe6b84d73e721f8609c923c96cf739c858fbb73d3ddb7614a316e.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "お茶。",
+      "audio": "audio/01bd038844dad60a91f029777da5a4fef852e1cd0506c1afc8d08547ad2f3e4e.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "ビールが来た。",
+      "audio": "audio/b53195a408805774d6e7f71594d20b1234502aece8dca8261574695087fc995a.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "ウーロン茶が来た。",
+      "audio": "audio/40fafb9fce3a932bf6fa20b131e43c82f31a510072d2508d9e1241acbbaff889.mp3"
+    },
+    {
+      "role": "aoi",
+      "text": "かんぱい！",
+      "audio": "audio/15b4813c95a4e86f9a6a97abf574229fd83d7bdf3b3304910b273a02a365e564.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "かんぱい！",
+      "audio": "audio/e43963dea1417e3c61c9d29e2f56d05c1b6db9b008f4f90b3299a2afaf821aad.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "みんなが、あなたのグラスを見ている。",
+      "audio": "audio/0c2cd668286832b47249100736a062f64dc4def2e0fa440bba3bca9cd97b5670.mp3"
+    },
+    {
+      "role": "aoi",
+      "text": "私が注ぎますね。",
+      "audio": "audio/d5fa53763a03221c414ff0f1645fcc41c60acce550a8decf09b25a7a32f5d4c2.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "そうなんですか。",
+      "audio": "audio/e5388668b847a9a42daca48c3e02e0b923d53308a38feb9e39f93a3143880113.mp3"
+    },
+    {
+      "role": "aoi",
+      "text": "小光さん、面白い人ですね。",
+      "audio": "audio/0041ad2698fa0dca97598120a40c453e47df0fdcbf26ebea8418c7338e1f456a.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "そうですか？",
+      "audio": "audio/50ca58f6019d65ce1ad84014bba63aecff41557c569e412e9129f0d27fa358b4.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "歓迎会が終わった。東京の夜が更けていく。",
+      "audio": "audio/6f8e8e8602e8294c6b75cb1860abfe0314b224298f3f16a56bb9ba7347c34b3b.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "初めての顧客訪問。",
+      "audio": "audio/d6d7fb8ecc9ab9c51720e7ef3f38d806bfa0fcc0a1e2b634c953cf99db21f05b.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "なぜですか？",
+      "audio": "audio/0992a4416908e481100ee22a41c71363e9c1c48084329daf24a2daf43fbfb864.mp3"
+    },
+    {
+      "role": "toudou",
+      "text": "大切な顧客ですから、一人で大丈夫ですよ。",
+      "audio": "audio/8efcf62020e0c978e0a235ed7eb9814f30ed4331a410ebbfdcccccf2d25629b8.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "わかりました。",
+      "audio": "audio/5d06dc67786e650c11028e84889c2bc0283a5796962b8d2bf7ede6f562149530.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "「お連れ様は？」と聞かれた。",
+      "audio": "audio/dd0dd8d487e6feb42a00d4a026730acbe857bd6e819cd8256a84999111dfb1ee.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "どういうこと？",
+      "audio": "audio/f47000150cd953685ccadf4c8a836ba510f560bec3808254ba79c45006cea15e.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "同伴が、必要です。",
+      "audio": "audio/613b767900fe1c11e9ebb082539ebeea801a51208c9b9249f3c2cdf3fcbdcf80.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "そうですか。",
+      "audio": "audio/3655c96c1c7d6f5633f628ae0fd2f1fa9ef4bc829180e625a3babfce97e71a08.mp3"
+    },
+    {
+      "role": "aoi",
+      "text": "あれ、藤堂さん、教えてなかったの？",
+      "audio": "audio/46c327b894384d372b2160cae0f801187128a141b0affc8e2b949540879415bb.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "何のことですか？",
+      "audio": "audio/dc33bd8f5878e100e9bedc72c2066a0ca594c6b05c6366a160fde602eeeb30b1.mp3"
+    },
+    {
+      "role": "aoi",
+      "text": "この顧客は、パートナー同伴がルールなの。",
+      "audio": "audio/969c5c18bdac6f2104921bc1615eebfc6ec07789f159d689fa55a77f9c2e44fb.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "でも、恋人なんていない。",
+      "audio": "audio/9d1cbfe2b9764b8aecb333664a013f56c7bdb15a3768c880e90f374e02c3c3d2.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "顧客を失いかけた。だが、これが罠だとは。",
+      "audio": "audio/001c2031f6e34fb07dba5f59916809d8d411379b4bbfc1bd46cda26f2b087c52.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "自由時間。何をしようか。",
+      "audio": "audio/7b4d2565ebc50a8b69453840d7577fd6fe0bd8952de43bddf72f75d1328356b1.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "残業している葵を見つけた。",
+      "audio": "audio/288ac0c0a2eafcd65844e599e8e54e5062a86880524ba169609f22864c929e46.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "お疲れさまです。",
+      "audio": "audio/ce8c816b8f10a552e856fc82d21c966eae826ffa8bfa5e133703a358622da97d.mp3"
+    },
+    {
+      "role": "aoi",
+      "text": "お疲れさま！もう少しで終わります。",
+      "audio": "audio/11b6b97af75d54b788f0f853f4a38deba834d7ae6109b42032e0cdfbf1744de8.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "自動販売機。コーヒーを買った。",
+      "audio": "audio/f7904e37f436ceb6a955ef30519c61b01ab4dba30df516faeae2578e39743100.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "静かなカフェに入った。",
+      "audio": "audio/3d20999f2642b5de70357bca585bac6ca3b6d0b3beb4357b805a37072079ff82.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "公園。桜の木があった。",
+      "audio": "audio/786a39fd553bf43bb378d2b2caef17094679a107e553fc8a00deb5fee02459ab.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "渋谷のスクランブル交差点。人、人、人。",
+      "audio": "audio/a194f97231d30fc514eb44e0b1eb3c8dc6aa2848d60347b4ff0c4f6243c1f9dc.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "仕事に戻ることにした。",
+      "audio": "audio/6e6ee3f491b86ab017ae5e402799b72ebb120635a1f0f54c937f5519188edc95.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "和風堂。重要なデモの日。",
+      "audio": "audio/fa5f89071b935f8a3d97dbc9c014ed57c9b8cdcae5e44008533d63d4d9f17765.mp3"
+    },
+    {
+      "role": "toudou",
+      "text": "え、これは……なぜ動かない？",
+      "audio": "audio/5b0bb1730033932f80b813064cad25bb5b36b735653698cd91e81c6e9bc1a1db.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "手伝います。",
+      "audio": "audio/9921fcbcee52f193b20e1f49882c9f8e319c426b9a47bd43e46925b371238142.mp3"
+    },
+    {
+      "role": "toudou",
+      "text": "これは小光さんのデータが悪いんです。",
+      "audio": "audio/240d146ec3fdbb6dc8a9123f34fa83884608e41a6767ac6995738322cd2d4186.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "え？",
+      "audio": "audio/5d2c464a896dd2e590a2550240e53b1083cb7cbf49db619da2c6f208b462cece.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "ちがいます！",
+      "audio": "audio/21fd306577f4475ea1f99d39a38e2e7268363758f85dc21e057def6d9976e909.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "言葉が出なかった。",
+      "audio": "audio/3191c6e14efadc2ec2c08f5be1828c9a9a9ea135377f20f7a96f82d766e30874.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "ち、ちがいます……",
+      "audio": "audio/6543397854e7a8049ef47744da63d1f62f33e0e6ae4677565a1639c0a681f3c0.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "ちがいます！それは……",
+      "audio": "audio/f16fb69943355ee534323244ffda4a1430c63d6f7253e5603e5b80fa93d9077e.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "日本語が、出てこない。",
+      "audio": "audio/a1d3e407a78d0fc1dd30ec9ca32dbf2b19ef576c4207d14852bd5a8df547af7f.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "葵は、何かを言いたそうだった。",
+      "audio": "audio/b32da27389e61803e20a2fcf4b65edebcaca5a6750294c4c3524885a58466190.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "デモは失敗。責任は、あなたに。",
+      "audio": "audio/19e74392eaa8e3df06e249aad6832df6ebffa856f090fa31a241371f467529dd.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "一人、会社の窓の外を見ていた。",
+      "audio": "audio/a1ee2bca43474396d6d3d8c28d2051dbe9afc3612361a69b0ca41ec0061af4c2.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "説明しようと、言葉を探した。",
+      "audio": "audio/11cdbb9a6bd12e8947ed41b40aa1047a8a2357fbe34721f7b2e6d52720bcb5ae.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "「ちがいます。私のデータは正しいです。」",
+      "audio": "audio/f53826a825ca657b2fc935ccd6070033af5f0a9f43ae07aa197042611ef843cb.mp3"
+    },
+    {
+      "role": "aoi",
+      "text": "小光さん……私、何かできること、ありますか？",
+      "audio": "audio/eee53c5d4961281fb34b85f5ad5bda7a0d098937da490f750c3613c5ae1d8c91.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "助けてほしい。",
+      "audio": "audio/630e15422bd38d7d34c0c72119bdd2734cf500d5b57d2f09244b9a14b4db4015.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "一人で大丈夫。",
+      "audio": "audio/c4ae40c774c8071c6c7b395c2aff1cf1010f3ff5970be5fd8a53debd7e832313.mp3"
+    },
+    {
+      "role": "aoi",
+      "text": "私……空気を読まなきゃって、ずっと思ってた。",
+      "audio": "audio/3a590d775830d6c86cf569b6ea16075dc66aabb0d70eb5a921830f0503827eb7.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "決めた。自分の手で、証明する。",
+      "audio": "audio/e2c25a99d37a2a3a721b30d3dc740fb4f3a154ec9f0748a6bf1de3dffa65199e.mp3"
+    },
+    {
+      "role": "aoi",
+      "text": "小光さん、いい方法があります。",
+      "audio": "audio/ecfd1eca02e3ef5880179a5d62897763d5702a145083ce817f39aee79557494a.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "何ですか？",
+      "audio": "audio/6a6ac33f54e67dc6d21920f83a1caf9773b5e42278ace67aec1878f8ef1557a6.mp3"
+    },
+    {
+      "role": "aoi",
+      "text": "恋人のふりをして、招待会に出ましょう。",
+      "audio": "audio/da77192cdc7361aaf2fc46d2069d97dba5a8ca6ff2371794dc1a906a52c0f792.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "わかりました。やります。",
+      "audio": "audio/caa324dc8dd5bcf630c0fb06e5b5f46de918c18e772cc50f5ee19d6f832812c9.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "でも、いいんですか？",
+      "audio": "audio/c6b17cdc030b056bf472419475837d19142710b10119d9e8fe2e0a7b18541231.mp3"
+    },
+    {
+      "role": "aoi",
+      "text": "私は、小光さんを信じてます。だから。",
+      "audio": "audio/ef3c04d5cdb16d302b0b985bdede3301db21a07c918c51154cbf0b4fa659250b.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "こうして、二人の「契約」が始まった。",
+      "audio": "audio/b9f33a04a4175b9acd68c1d0913ff7dd6685c225957e208b95985c1890abc70e.mp3"
+    },
+    {
+      "role": "aoi",
+      "text": "じゃあ、練習しましょう。まず、名前の呼び方！",
+      "audio": "audio/bfcd613a82982fa4ad39e4349acea884fe1136fd4a8703f60827815e57f44a74.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "葵……さん？",
+      "audio": "audio/e8a8f0833591d0de933d8a8fd27885a5c47d06af2f7b9ef2fcaa430a20555471.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "葵。葵って呼ぶ。",
+      "audio": "audio/28b0db241701e3a9f54235937f0ee726eefa6d7b191a7e54b6880ccfae4c3048.mp3"
+    },
+    {
+      "role": "aoi",
+      "text": "ふふ、呼び捨てでいいよ。",
+      "audio": "audio/8e1b2e1ad91ee2363d41267f1da2007982c23b3784628a4ce9bf6d8f79818d02.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "葵。よろしく。",
+      "audio": "audio/3ae1793a24b09f895ce46d97e143dd051944cf830c09282efef7a0d0ffa05488.mp3"
+    },
+    {
+      "role": "aoi",
+      "text": "……本当の恋人みたいだね。",
+      "audio": "audio/f2b3d64b2d1dc16082cfb5ab87ef0c995df89da42aad58da9deb03fa4b9fb0fb.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "そうだね。",
+      "audio": "audio/ae3cc51ce264dafd6f6d27a8134e5ecccfd39575bf4d751ecb4666aecff438f3.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "招待会の日が、近づいてくる。",
+      "audio": "audio/aba37ad26148993f7f376095b7b06bcf8290776c9c02ced8d869a318d4bcc143.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "和風堂の招待会。",
+      "audio": "audio/ae3b94431c7d899008344e5078c5260b52e20585d6ff8c148fc2bfbdfd3fa3be.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "こんばんは。",
+      "audio": "audio/a45bc0a1e9c47cc53efb2c7933c40c6a2f815924404ef2d38eeb41730d819d88.mp3"
+    },
+    {
+      "role": "shachou",
+      "text": "お二人は、恋人同士ですと。",
+      "audio": "audio/092cd9947de0a15a2dabe0a0a375e31346656171f6ca189a2808cdaa8ba9bca0.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "はい。恋人です。",
+      "audio": "audio/4fda5d11cfaa5f87bc05b0a8b5e2f29390a72757229c3a4a58260ddbb0ad8d08.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "「すみません。本当のことを、話させてください。」",
+      "audio": "audio/0f8130f6cced8d322dab36b9947c4c338b72b0b09540217fffdc6ca7eb1469c3.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "これが、私が作った証拠です。",
+      "audio": "audio/e848f647aeff3a3c2905cbe5151ec834d041796dc2dea76babadbde55ab9c498.mp3"
+    },
+    {
+      "role": "shachou",
+      "text": "なるほど。……あなたでしたか。",
+      "audio": "audio/f5cf4d66e172fbf03fafb31f0bb0e4c41714ff96a65cb899a995092d43d40ed6.mp3"
+    },
+    {
+      "role": "toudou",
+      "text": "藤堂さん、これはどういうことですか？",
+      "audio": "audio/995506e46846b39d1d0ba8d08b0a97400209958169e0d594eb9abb307134ff1a.mp3"
+    },
+    {
+      "role": "aoi",
+      "text": "小光さん、私……空気を読むの、もう疲れた。",
+      "audio": "audio/d55d9e3833173e9584a0f2a2ddf0d33d9a539855ba68c400c51f342b63670af9.mp3"
+    },
+    {
+      "role": "xiaoguang",
+      "text": "葵は、そのままでいい。",
+      "audio": "audio/c4edba4eaa5087a69d071336d2b6c56952a12110a948de35944b563570094453.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "葵の笑顔が、初めて、本当のものになった。",
+      "audio": "audio/dcbe89a01ea075a8d9a42a1889839b34aed9088d502ef6d70e8aa82d717ddd7a.mp3"
+    },
+    {
+      "role": "narrator",
+      "text": "東京での物語は、まだ始まったばかりだ。",
+      "audio": "audio/d8d5f25e46358f29f994990e2bbdd494827e3a93e4b60d8d7eb9dc185fd20cd5.mp3"
+    }
+  ]
+}

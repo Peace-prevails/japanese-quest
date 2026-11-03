@@ -1,0 +1,2679 @@
+{
+  "id": "EP01",
+  "title": {
+    "ja": "東京、空気が読めない",
+    "zh": "东京，读不懂的空气"
+  },
+  "start": "s0_start",
+  "scenes": [
+    {
+      "id": "S0",
+      "title": "到达东京",
+      "canonical_script": ""
+    },
+    {
+      "id": "S1",
+      "title": "公司报到",
+      "canonical_script": ""
+    },
+    {
+      "id": "S2",
+      "title": "项目介绍",
+      "canonical_script": ""
+    },
+    {
+      "id": "S3",
+      "title": "居酒屋欢迎会",
+      "canonical_script": ""
+    },
+    {
+      "id": "S4",
+      "title": "跑客户",
+      "canonical_script": ""
+    },
+    {
+      "id": "S5",
+      "title": "自由探索",
+      "canonical_script": ""
+    },
+    {
+      "id": "S6",
+      "title": "背锅",
+      "canonical_script": ""
+    },
+    {
+      "id": "S7",
+      "title": "无法自证",
+      "canonical_script": ""
+    },
+    {
+      "id": "S8",
+      "title": "契约",
+      "canonical_script": ""
+    },
+    {
+      "id": "S9",
+      "title": "反转",
+      "canonical_script": ""
+    }
+  ],
+  "initial_state": {
+    "asked_directions": false,
+    "saw_engine": false,
+    "order_selected": null,
+    "read_air_success": null,
+    "first_reaction": null,
+    "trust_aoi": null,
+    "contract_made": false,
+    "explored_hotspots": []
+  },
+  "initial_learning": {
+    "hint_usage": {},
+    "phrase_exposure": {},
+    "replay_count": 0,
+    "selected_expressions": {}
+  },
+  "menu": [],
+  "nodes": [
+    {
+      "id": "s0_start",
+      "scene_id": "S0",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "東京に着きました。",
+      "zh": "到东京了。",
+      "romaji": "Tōkyō ni tsukimashita.",
+      "context": {
+        "zh": "你拖着行李箱站在东京车站外。手机快没电了，得在天黑前找到公司。"
+      },
+      "objective": "找到公司",
+      "learning_tags": [
+        "あいさつ"
+      ],
+      "asset_refs": [
+        "BG01_STATION"
+      ],
+      "choices": [
+        {
+          "id": "c_phone",
+          "ja": "スマホを見る。",
+          "zh": "看手机。",
+          "romaji": "Sumaho wo miru.",
+          "next": "s0_phone",
+          "set": {},
+          "requires": {},
+          "functional": true
+        },
+        {
+          "id": "c_ask",
+          "ja": "すみません、会社はどこですか？",
+          "zh": "请问，公司在哪里？",
+          "romaji": "Sumimasen, kaisha wa doko desu ka?",
+          "next": "s0_ask",
+          "set": {
+            "asked_directions": true
+          },
+          "requires": {}
+        },
+        {
+          "id": "c_walk",
+          "ja": "そのまま歩く。",
+          "zh": "直接往前走。",
+          "romaji": "Sono mama aruku.",
+          "next": "s0_walk",
+          "set": {},
+          "requires": {},
+          "functional": true
+        }
+      ]
+    },
+    {
+      "id": "s0_phone",
+      "scene_id": "S0",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "あ、電池が切れた。",
+      "zh": "啊，手机没电了。",
+      "romaji": "A, denchi ga kireta.",
+      "context": {
+        "zh": "手机黑屏了，导航用不了。只能靠自己了。"
+      },
+      "objective": "找到公司",
+      "learning_tags": [],
+      "asset_refs": [
+        "BG24_PHONE"
+      ],
+      "choices": [
+        {
+          "id": "c_ask2",
+          "ja": "すみません、会社はどこですか？",
+          "zh": "请问，公司在哪里？",
+          "romaji": "Sumimasen, kaisha wa doko desu ka?",
+          "next": "s0_ask",
+          "set": {
+            "asked_directions": true
+          },
+          "requires": {}
+        },
+        {
+          "id": "c_walk2",
+          "ja": "そのまま歩く。",
+          "zh": "直接往前走。",
+          "romaji": "Sono mama aruku.",
+          "next": "s0_walk",
+          "set": {},
+          "requires": {},
+          "functional": true
+        }
+      ]
+    },
+    {
+      "id": "s0_ask",
+      "scene_id": "S0",
+      "speaker": "PASSERBY",
+      "kind": "dialogue",
+      "ja": "まっすぐ行って、右です。",
+      "zh": "直走，然后右转。",
+      "romaji": "Massugu itte, migi desu.",
+      "context": {
+        "zh": "路人停下脚步，给你指了路。"
+      },
+      "objective": "听懂指路",
+      "learning_tags": [
+        "みちをきく"
+      ],
+      "asset_refs": [
+        "BG25_ASK"
+      ],
+      "choices": [
+        {
+          "id": "c_thanks",
+          "ja": "ありがとうございます。",
+          "zh": "谢谢。",
+          "romaji": "Arigatō gozaimasu.",
+          "next": "s1_company",
+          "set": {},
+          "requires": {}
+        },
+        {
+          "id": "c_not_understand",
+          "ja": "わかりません。",
+          "zh": "我听不懂。",
+          "romaji": "Wakarimasen.",
+          "next": "s0_simple",
+          "set": {},
+          "requires": {}
+        }
+      ]
+    },
+    {
+      "id": "s0_simple",
+      "scene_id": "S0",
+      "speaker": "PASSERBY",
+      "kind": "dialogue",
+      "ja": "まっすぐ。右。",
+      "zh": "直走。右边。",
+      "romaji": "Massugu. Migi.",
+      "context": {
+        "zh": "路人放慢语速，用手比划，把话拆成了最简单的词。"
+      },
+      "objective": "听懂简化的指路",
+      "learning_tags": [
+        "みちをきく"
+      ],
+      "asset_refs": [
+        "BG25_ASK"
+      ],
+      "choices": [
+        {
+          "id": "c_thanks2",
+          "ja": "ありがとうございます。",
+          "zh": "谢谢。",
+          "romaji": "Arigatō gozaimasu.",
+          "next": "s1_company",
+          "set": {},
+          "requires": {}
+        }
+      ]
+    },
+    {
+      "id": "s0_walk",
+      "scene_id": "S0",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "会社が見えました。",
+      "zh": "看到公司了。",
+      "romaji": "Kaisha ga miemashita.",
+      "context": {
+        "zh": "顺着路走，一栋写字楼出现在眼前。"
+      },
+      "objective": "走进公司",
+      "learning_tags": [],
+      "asset_refs": [
+        "BG26_BUILDING"
+      ],
+      "choices": [
+        {
+          "id": "c_enter",
+          "ja": "入る。",
+          "zh": "进去。",
+          "romaji": "Hairu.",
+          "next": "s1_company",
+          "set": {},
+          "requires": {},
+          "functional": true
+        }
+      ]
+    },
+    {
+      "id": "s1_company",
+      "scene_id": "S1",
+      "speaker": "AOI",
+      "kind": "dialogue",
+      "ja": "あ、はじめまして！高橋葵です。",
+      "zh": "啊，初次见面！我是高桥葵。",
+      "romaji": "A, hajimemashite! Takahashi Aoi desu.",
+      "context": {
+        "zh": "一位年轻女职员笑着迎上来，眼睛亮亮的。"
+      },
+      "objective": "自我介绍",
+      "learning_tags": [
+        "じこしょうかい"
+      ],
+      "asset_refs": [
+        "BG02_OFFICE",
+        "CH02_AOI"
+      ],
+      "choices": [
+        {
+          "id": "c_self",
+          "ja": "はじめまして。よろしくお願いします。",
+          "zh": "初次见面，请多关照。",
+          "romaji": "Hajimemashite. Yoroshiku onegaishimasu.",
+          "next": "s1_self_intro",
+          "set": {},
+          "requires": {}
+        },
+        {
+          "id": "c_not_understand",
+          "ja": "わかりません。",
+          "zh": "我听不懂。",
+          "romaji": "Wakarimasen.",
+          "next": "s1_simple",
+          "set": {},
+          "requires": {}
+        }
+      ]
+    },
+    {
+      "id": "s1_self_intro",
+      "scene_id": "S1",
+      "speaker": "AOI",
+      "kind": "dialogue",
+      "ja": "よろしくお願いします！日本は初めてですか？",
+      "zh": "请多关照！你是第一次来日本吗？",
+      "romaji": "Yoroshiku onegaishimasu! Nihon wa hajimete desu ka?",
+      "context": {
+        "zh": "葵好奇地看着你。"
+      },
+      "objective": "回答葵",
+      "learning_tags": [
+        "じこしょうかい"
+      ],
+      "asset_refs": [
+        "BG02_OFFICE",
+        "CH02_AOI"
+      ],
+      "choices": [
+        {
+          "id": "c_yes",
+          "ja": "はい、初めてです。",
+          "zh": "是的，第一次。",
+          "romaji": "Hai, hajimete desu.",
+          "next": "s1_toudou",
+          "set": {},
+          "requires": {}
+        },
+        {
+          "id": "c_not_understand",
+          "ja": "わかりません。",
+          "zh": "我听不懂。",
+          "romaji": "Wakarimasen.",
+          "next": "s1_simple",
+          "set": {},
+          "requires": {}
+        }
+      ]
+    },
+    {
+      "id": "s1_simple",
+      "scene_id": "S1",
+      "speaker": "AOI",
+      "kind": "dialogue",
+      "ja": "日本は、初めて？",
+      "zh": "日本，第一次来？",
+      "romaji": "Nihon wa, hajimete?",
+      "context": {
+        "zh": "葵笑着放慢语速，把问题拆成最简单的词。"
+      },
+      "objective": "回答葵",
+      "learning_tags": [
+        "じこしょうかい"
+      ],
+      "asset_refs": [
+        "BG02_OFFICE",
+        "CH02_AOI"
+      ],
+      "choices": [
+        {
+          "id": "c_yes2",
+          "ja": "はい。",
+          "zh": "是的。",
+          "romaji": "Hai.",
+          "next": "s1_toudou",
+          "set": {},
+          "requires": {}
+        }
+      ]
+    },
+    {
+      "id": "s1_toudou",
+      "scene_id": "S1",
+      "speaker": "TOUDOU",
+      "kind": "dialogue",
+      "ja": "ああ、小光さん。よく来てくれました。私は藤堂です。",
+      "zh": "啊，小光。欢迎你来。我是藤堂。",
+      "romaji": "Aa, Xiaoguang-san. Yoku kite kuremashita. Watashi wa Tōdō desu.",
+      "context": {
+        "zh": "一位西装革履的中年男人走过来，笑容满面，但眼神没有温度。"
+      },
+      "objective": "认识前辈",
+      "learning_tags": [
+        "じこしょうかい"
+      ],
+      "asset_refs": [
+        "BG02_OFFICE",
+        "CH03_TOUDOU"
+      ],
+      "choices": [
+        {
+          "id": "c_greet",
+          "ja": "はじめまして。よろしくお願いします。",
+          "zh": "初次见面，请多关照。",
+          "romaji": "Hajimemashite. Yoroshiku onegaishimasu.",
+          "next": "s1_project",
+          "set": {},
+          "requires": {}
+        }
+      ]
+    },
+    {
+      "id": "s1_project",
+      "scene_id": "S1",
+      "speaker": "TOUDOU",
+      "kind": "dialogue",
+      "ja": "こちらが、今回の AI 広告プロジェクトです。",
+      "zh": "这就是这次的 AI 广告项目。",
+      "romaji": "Kochira ga, konkai no AI kōkoku purojekuto desu.",
+      "context": {
+        "zh": "藤堂指向办公区的大屏幕。"
+      },
+      "objective": "了解项目",
+      "learning_tags": [
+        "しごと"
+      ],
+      "asset_refs": [
+        "BG41_TOUDOU_SCREEN"
+      ],
+      "choices": [
+        {
+          "id": "c_look",
+          "ja": "見せてください。",
+          "zh": "让我看看。",
+          "romaji": "Misete kudasai.",
+          "next": "s1_assign",
+          "set": {},
+          "requires": {}
+        }
+      ]
+    },
+    {
+      "id": "s1_assign",
+      "scene_id": "S1",
+      "speaker": "AOI",
+      "kind": "dialogue",
+      "ja": "私、高橋がサポートします！よろしくお願いします。",
+      "zh": "我，高桥来负责支持你！请多关照。",
+      "romaji": "Watashi, Takahashi ga sapooto shimasu! Yoroshiku onegaishimasu.",
+      "context": {
+        "zh": "葵举手，笑得很有精神。"
+      },
+      "objective": "接受安排",
+      "learning_tags": [
+        "しごと"
+      ],
+      "asset_refs": [
+        "BG02_OFFICE",
+        "CH02_AOI"
+      ],
+      "choices": [
+        {
+          "id": "c_accept",
+          "ja": "よろしくお願いします。",
+          "zh": "请多关照。",
+          "romaji": "Yoroshiku onegaishimasu.",
+          "next": "s1_end",
+          "set": {},
+          "requires": {}
+        }
+      ]
+    },
+    {
+      "id": "s1_end",
+      "scene_id": "S1",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "こうして、東京での仕事が始まった。",
+      "zh": "就这样，东京的工作开始了。",
+      "romaji": "Kōshite, Tōkyō de no shigoto ga hajimatta.",
+      "context": {
+        "zh": "报到结束了。高桥葵负责带你，是个热心的女孩；藤堂诚是你的前辈，笑容很客气，却让人有点看不透。你在东京的工作，就这样开始了。"
+      },
+      "objective": "开始工作",
+      "learning_tags": [],
+      "asset_refs": [
+        "BG35_OFFICE_VIEW"
+      ],
+      "choices": [
+        {
+          "id": "c_next",
+          "ja": "次へ。",
+          "zh": "继续。",
+          "romaji": "Tsugi e.",
+          "next": "s2_project",
+          "set": {},
+          "requires": {},
+          "functional": true
+        }
+      ]
+    },
+    {
+      "id": "s2_project",
+      "scene_id": "S2",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "プロジェクトの説明が始まった。",
+      "zh": "项目说明开始了。",
+      "romaji": "Purojekuto no setsumei ga hajimatta.",
+      "context": {
+        "zh": "藤堂打开投影，开始介绍：公司要做一个 AI 广告系统——输入商品信息，自动生成广告创意和画面。这是本季度的重点项目，公司很重视。"
+      },
+      "objective": "了解项目",
+      "learning_tags": [
+        "しごと"
+      ],
+      "asset_refs": [
+        "BG17_MEETING"
+      ],
+      "choices": [
+        {
+          "id": "c_listen",
+          "ja": "聞く。",
+          "zh": "听。",
+          "romaji": "Kiku.",
+          "next": "s2_engine",
+          "set": {},
+          "requires": {},
+          "functional": true
+        },
+        {
+          "id": "c_not_understand",
+          "ja": "わかりません。",
+          "zh": "我听不懂。",
+          "romaji": "Wakarimasen.",
+          "next": "s2_project_simple",
+          "set": {},
+          "requires": {}
+        }
+      ]
+    },
+    {
+      "id": "s2_project_simple",
+      "scene_id": "S2",
+      "speaker": "TOUDOU",
+      "kind": "dialogue",
+      "ja": "AI 広告。作る。",
+      "zh": "AI 广告。做。",
+      "romaji": "AI kōkoku. Tsukuru.",
+      "context": {
+        "zh": "藤堂看你日语吃力，放慢语速，用最简单的词重复了一遍重点：AI，自动做广告。"
+      },
+      "objective": "了解项目",
+      "learning_tags": [
+        "しごと"
+      ],
+      "asset_refs": [
+        "BG02_OFFICE",
+        "CH03_TOUDOU"
+      ],
+      "choices": [
+        {
+          "id": "c_ok",
+          "ja": "なるほど。",
+          "zh": "原来如此。",
+          "romaji": "Naruhodo.",
+          "next": "s2_engine",
+          "set": {},
+          "requires": {}
+        }
+      ]
+    },
+    {
+      "id": "s2_engine",
+      "scene_id": "S2",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "「絆」は、あなたが作った AI 広告アシスタントだ。",
+      "zh": "「絆」是你做的 AI 广告助手。",
+      "romaji": "「Kizuna」 wa, anata ga tsukutta AI kōkoku ashisutanto da.",
+      "context": {
+        "zh": "轮到你了。你展示自己开发的 AI 广告助手「絆」——输入商品信息，它就能自动生成广告创意、文案和画面。"
+      },
+      "objective": "展示助手「絆」",
+      "learning_tags": [
+        "しごと"
+      ],
+      "asset_refs": [
+        "BG10_AI_DEMO"
+      ],
+      "choices": [
+        {
+          "id": "c_demo",
+          "ja": "デモを見せます。",
+          "zh": "我来演示。",
+          "romaji": "Demo wo misemasu.",
+          "next": "s2_engine_demo",
+          "set": {
+            "saw_engine": true
+          },
+          "requires": {}
+        },
+        {
+          "id": "c_shy",
+          "ja": "……",
+          "zh": "……",
+          "romaji": "……",
+          "next": "s2_engine_help",
+          "set": {},
+          "requires": {}
+        }
+      ]
+    },
+    {
+      "id": "s2_engine_help",
+      "scene_id": "S2",
+      "speaker": "AOI",
+      "kind": "dialogue",
+      "ja": "小光さんが作ったアシスタントです。すごいんです！",
+      "zh": "这是小光做的助手。很厉害的！",
+      "romaji": "Xiaoguang-san ga tsukutta ashisutanto desu. Sugoin desu!",
+      "context": {
+        "zh": "葵看你不说话，抢着帮你介绍，语气里带着骄傲。"
+      },
+      "objective": "展示助手「絆」",
+      "learning_tags": [
+        "しごと"
+      ],
+      "asset_refs": [
+        "BG02_OFFICE",
+        "CH02_AOI"
+      ],
+      "choices": [
+        {
+          "id": "c_demo2",
+          "ja": "デモを見せます。",
+          "zh": "我来演示。",
+          "romaji": "Demo wo misemasu.",
+          "next": "s2_engine_demo",
+          "set": {
+            "saw_engine": true
+          },
+          "requires": {}
+        }
+      ]
+    },
+    {
+      "id": "s2_engine_demo",
+      "scene_id": "S2",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "「絆」が広告を作った。画面の隅に、五枚の花びら。",
+      "zh": "「絆」生成了广告。画面角落，有五片花瓣。",
+      "romaji": "「Kizuna」 ga kōkoku wo tsukutta. Gamen no sumi ni, gomai no hanabira.",
+      "context": {
+        "zh": "演示很顺利。你顺手在「絆」的输入框里敲进了一个只有你知道的触发词——生成的海报角落，悄悄出现了一朵五瓣樱花。这是你藏在代码里的署名彩蛋：只有输入这个触发词，签名才会出现。"
+      },
+      "objective": "展示成果",
+      "learning_tags": [
+        "しごと"
+      ],
+      "asset_refs": [
+        "BG10_AI_DEMO"
+      ],
+      "choices": [
+        {
+          "id": "c_next",
+          "ja": "次へ。",
+          "zh": "继续。",
+          "romaji": "Tsugi e.",
+          "next": "s2_toudou_praise",
+          "set": {},
+          "requires": {},
+          "functional": true
+        }
+      ]
+    },
+    {
+      "id": "s2_toudou_praise",
+      "scene_id": "S2",
+      "speaker": "TOUDOU",
+      "kind": "dialogue",
+      "ja": "素晴らしい。さすがですね。",
+      "zh": "了不起。真不愧是专业的。",
+      "romaji": "Subarashī. Sasuga desu ne.",
+      "context": {
+        "zh": "藤堂拍手称赞，笑容更浓了。但他的眼睛盯着屏幕上的成果，像是在盘算什么。"
+      },
+      "objective": "接受称赞",
+      "learning_tags": [
+        "しごと"
+      ],
+      "asset_refs": [
+        "BG42_TOUDOU_LOOK"
+      ],
+      "choices": [
+        {
+          "id": "c_thanks",
+          "ja": "ありがとうございます。",
+          "zh": "谢谢。",
+          "romaji": "Arigatō gozaimasu.",
+          "next": "s2_end",
+          "set": {},
+          "requires": {}
+        },
+        {
+          "id": "c_humble",
+          "ja": "いいえ。",
+          "zh": "哪里哪里。",
+          "romaji": "Iie.",
+          "next": "s2_end",
+          "set": {},
+          "requires": {}
+        }
+      ],
+      "emotion": "scheming"
+    },
+    {
+      "id": "s2_end",
+      "scene_id": "S2",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "会議が終わった。だが、何かが引っかかる。",
+      "zh": "会议结束了。但总觉得哪里不对劲。",
+      "romaji": "Kaigi ga owatta. Daga, nanika ga hikkakaru.",
+      "context": {
+        "zh": "藤堂离开时回头看了你一眼，嘴角挂着一丝说不清的笑。"
+      },
+      "objective": "结束会议",
+      "learning_tags": [],
+      "asset_refs": [
+        "BG36_MEETING_END"
+      ],
+      "choices": [
+        {
+          "id": "c_next",
+          "ja": "次へ。",
+          "zh": "继续。",
+          "romaji": "Tsugi e.",
+          "next": "s3_izakaya",
+          "set": {},
+          "requires": {},
+          "functional": true
+        }
+      ]
+    },
+    {
+      "id": "s3_izakaya",
+      "scene_id": "S3",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "歓迎会。居酒屋に来た。",
+      "zh": "欢迎会。来到了居酒屋。",
+      "romaji": "Kangeikai. Izakaya ni kita.",
+      "context": {
+        "zh": "团队在居酒屋为你办欢迎会。暖色的灯光，热闹的人声。"
+      },
+      "objective": "参加欢迎会",
+      "learning_tags": [
+        "あいさつ"
+      ],
+      "asset_refs": [
+        "BG14_IZAKAYA_WELCOME"
+      ],
+      "choices": [
+        {
+          "id": "c_enter",
+          "ja": "入る。",
+          "zh": "进去。",
+          "romaji": "Hairu.",
+          "next": "s3_order",
+          "set": {},
+          "requires": {},
+          "functional": true
+        }
+      ]
+    },
+    {
+      "id": "s3_order",
+      "scene_id": "S3",
+      "speaker": "AOI",
+      "kind": "dialogue",
+      "ja": "何を飲みますか？",
+      "zh": "你想喝什么？",
+      "romaji": "Nani wo nomimasu ka?",
+      "context": {
+        "zh": "葵把菜单递给你。"
+      },
+      "objective": "点饮料",
+      "learning_tags": [
+        "ちゅうもん"
+      ],
+      "asset_refs": [
+        "BG43_AOI_MENU"
+      ],
+      "choices": [
+        {
+          "id": "c_beer",
+          "ja": "ビールをください。",
+          "zh": "请给我啤酒。",
+          "romaji": "Bīru wo kudasai.",
+          "next": "s3_beer",
+          "set": {
+            "order_selected": "beer"
+          },
+          "requires": {}
+        },
+        {
+          "id": "c_tea",
+          "ja": "ウーロン茶をください。",
+          "zh": "请给我乌龙茶。",
+          "romaji": "Uuroncha wo kudasai.",
+          "next": "s3_tea",
+          "set": {
+            "order_selected": "tea"
+          },
+          "requires": {}
+        },
+        {
+          "id": "c_not_understand",
+          "ja": "わかりません。",
+          "zh": "我听不懂。",
+          "romaji": "Wakarimasen.",
+          "next": "s3_order_simple",
+          "set": {},
+          "requires": {}
+        }
+      ]
+    },
+    {
+      "id": "s3_order_simple",
+      "scene_id": "S3",
+      "speaker": "AOI",
+      "kind": "dialogue",
+      "ja": "ビール？お茶？",
+      "zh": "啤酒？还是茶？",
+      "romaji": "Bīru? Ocha?",
+      "context": {
+        "zh": "葵指了指菜单上的两个选项。"
+      },
+      "objective": "点饮料",
+      "learning_tags": [
+        "ちゅうもん"
+      ],
+      "asset_refs": [
+        "BG03_IZAKAYA",
+        "CH02_AOI"
+      ],
+      "choices": [
+        {
+          "id": "c_beer2",
+          "ja": "ビール。",
+          "zh": "啤酒。",
+          "romaji": "Bīru.",
+          "next": "s3_beer",
+          "set": {
+            "order_selected": "beer"
+          },
+          "requires": {}
+        },
+        {
+          "id": "c_tea2",
+          "ja": "お茶。",
+          "zh": "茶。",
+          "romaji": "Ocha.",
+          "next": "s3_tea",
+          "set": {
+            "order_selected": "tea"
+          },
+          "requires": {}
+        }
+      ]
+    },
+    {
+      "id": "s3_beer",
+      "scene_id": "S3",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "ビールが来た。",
+      "zh": "啤酒来了。",
+      "romaji": "Bīru ga kita.",
+      "context": {
+        "zh": "一杯冰凉的啤酒端到你面前。"
+      },
+      "objective": "点饮料",
+      "learning_tags": [
+        "ちゅうもん"
+      ],
+      "asset_refs": [
+        "BG27_BEER"
+      ],
+      "choices": [
+        {
+          "id": "c_next",
+          "ja": "次へ。",
+          "zh": "继续。",
+          "romaji": "Tsugi e.",
+          "next": "s3_kanpai",
+          "set": {},
+          "requires": {},
+          "functional": true
+        }
+      ]
+    },
+    {
+      "id": "s3_tea",
+      "scene_id": "S3",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "ウーロン茶が来た。",
+      "zh": "乌龙茶来了。",
+      "romaji": "Uuroncha ga kita.",
+      "context": {
+        "zh": "一杯温热的乌龙茶端到你面前。"
+      },
+      "objective": "点饮料",
+      "learning_tags": [
+        "ちゅうもん"
+      ],
+      "asset_refs": [
+        "BG28_TEA"
+      ],
+      "choices": [
+        {
+          "id": "c_next",
+          "ja": "次へ。",
+          "zh": "继续。",
+          "romaji": "Tsugi e.",
+          "next": "s3_kanpai",
+          "set": {},
+          "requires": {},
+          "functional": true
+        }
+      ]
+    },
+    {
+      "id": "s3_kanpai",
+      "scene_id": "S3",
+      "speaker": "AOI",
+      "kind": "dialogue",
+      "ja": "かんぱい！",
+      "zh": "干杯！",
+      "romaji": "Kanpai!",
+      "context": {
+        "zh": "大家举起杯子。葵朝你举杯，笑得很开心。"
+      },
+      "objective": "干杯",
+      "learning_tags": [
+        "かんぱい"
+      ],
+      "asset_refs": [
+        "BG15_KANPAI"
+      ],
+      "choices": [
+        {
+          "id": "c_kanpai",
+          "ja": "かんぱい！",
+          "zh": "干杯！",
+          "romaji": "Kanpai!",
+          "next": "s3_read_air",
+          "set": {},
+          "requires": {}
+        },
+        {
+          "id": "c_drink",
+          "ja": "（静かに飲む）",
+          "zh": "（安静地喝）",
+          "romaji": "（Shizuka ni nomu）",
+          "next": "s3_read_air",
+          "set": {},
+          "requires": {}
+        }
+      ]
+    },
+    {
+      "id": "s3_read_air",
+      "scene_id": "S3",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "みんなが、あなたのグラスを見ている。",
+      "zh": "大家看着你的杯子。",
+      "romaji": "Minna ga, anata no gurasu wo miteiru.",
+      "context": {
+        "zh": "在日本，晚辈要主动给前辈倒酒。但你不知道这个规矩，只顾着自己喝。空气，微妙地凝住了。"
+      },
+      "objective": "察觉气氛",
+      "learning_tags": [
+        "くうきをよむ"
+      ],
+      "asset_refs": [
+        "BG29_AWKWARD"
+      ],
+      "choices": [
+        {
+          "id": "c_notice",
+          "ja": "（気づく）",
+          "zh": "（察觉到了）",
+          "romaji": "（Kizuku）",
+          "next": "s3_aoi_help",
+          "set": {
+            "read_air_success": true
+          },
+          "requires": {}
+        },
+        {
+          "id": "c_unaware",
+          "ja": "（気づかない）",
+          "zh": "（没察觉）",
+          "romaji": "（Kizukanai）",
+          "next": "s3_aoi_help",
+          "set": {
+            "read_air_success": false
+          },
+          "requires": {}
+        }
+      ]
+    },
+    {
+      "id": "s3_aoi_help",
+      "scene_id": "S3",
+      "speaker": "AOI",
+      "kind": "dialogue",
+      "ja": "私が注ぎますね。",
+      "zh": "我来给你倒酒吧。",
+      "romaji": "Watashi ga tsugimasu ne.",
+      "context": {
+        "zh": "葵眼疾手快，接过酒瓶帮你解了围。她凑过来小声说：\"在日本，晚辈要先给前辈倒酒的。\""
+      },
+      "objective": "学习倒酒规矩",
+      "learning_tags": [
+        "くうきをよむ"
+      ],
+      "asset_refs": [
+        "BG16_POUR"
+      ],
+      "choices": [
+        {
+          "id": "c_thanks",
+          "ja": "ありがとうございます。",
+          "zh": "谢谢。",
+          "romaji": "Arigatō gozaimasu.",
+          "next": "s3_warm",
+          "set": {},
+          "requires": {}
+        },
+        {
+          "id": "c_learn",
+          "ja": "そうなんですか。",
+          "zh": "原来是这样。",
+          "romaji": "Sō nan desu ka.",
+          "next": "s3_warm",
+          "set": {},
+          "requires": {}
+        }
+      ]
+    },
+    {
+      "id": "s3_warm",
+      "scene_id": "S3",
+      "speaker": "AOI",
+      "kind": "dialogue",
+      "ja": "小光さん、面白い人ですね。",
+      "zh": "小光，你真是个有趣的人。",
+      "romaji": "Xiaoguang-san, omoshiroi hito desu ne.",
+      "context": {
+        "zh": "葵笑得眼睛弯弯的。不知道为什么，你在这个陌生的城市里，第一次感到了放松。"
+      },
+      "objective": "和葵聊天",
+      "learning_tags": [
+        "かんけい"
+      ],
+      "asset_refs": [
+        "BG03_IZAKAYA",
+        "CH02_AOI_RELIEF"
+      ],
+      "choices": [
+        {
+          "id": "c_smile",
+          "ja": "そうですか？",
+          "zh": "是吗？",
+          "romaji": "Sō desu ka?",
+          "next": "s3_end",
+          "set": {},
+          "requires": {}
+        },
+        {
+          "id": "c_thanks2",
+          "ja": "ありがとうございます。",
+          "zh": "谢谢。",
+          "romaji": "Arigatō gozaimasu.",
+          "next": "s3_end",
+          "set": {},
+          "requires": {}
+        }
+      ],
+      "emotion": "cheerful"
+    },
+    {
+      "id": "s3_end",
+      "scene_id": "S3",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "歓迎会が終わった。東京の夜が更けていく。",
+      "zh": "欢迎会结束了。东京的夜，渐渐深了。",
+      "romaji": "Kangeikai ga owatta. Tōkyō no yoru ga fuketeiku.",
+      "context": {
+        "zh": "你和葵的关系，似乎比来的时候近了一点。"
+      },
+      "objective": "回家",
+      "learning_tags": [],
+      "asset_refs": [
+        "BG30_IZAKAYA_END"
+      ],
+      "choices": [
+        {
+          "id": "c_next",
+          "ja": "次へ。",
+          "zh": "继续。",
+          "romaji": "Tsugi e.",
+          "next": "s4_client",
+          "set": {},
+          "requires": {},
+          "functional": true
+        }
+      ]
+    },
+    {
+      "id": "s4_client",
+      "scene_id": "S4",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "初めての顧客訪問。",
+      "zh": "第一次拜访客户。",
+      "romaji": "Hajimete no kokyaku hōmon.",
+      "context": {
+        "zh": "你第一次和藤堂一起去拜访客户。但到楼下时，藤堂突然说有事，让你一个人上去。"
+      },
+      "objective": "拜访客户",
+      "learning_tags": [
+        "しごと"
+      ],
+      "asset_refs": [
+        "BG18_WAGASHI_FRONT"
+      ],
+      "choices": [
+        {
+          "id": "c_up",
+          "ja": "一人で行く。",
+          "zh": "一个人上去。",
+          "romaji": "Hitori de iku.",
+          "next": "s4_rejected",
+          "set": {},
+          "requires": {},
+          "functional": true
+        },
+        {
+          "id": "c_ask",
+          "ja": "なぜですか？",
+          "zh": "为什么？",
+          "romaji": "Naze desu ka?",
+          "next": "s4_toudou_trap",
+          "set": {},
+          "requires": {}
+        }
+      ]
+    },
+    {
+      "id": "s4_toudou_trap",
+      "scene_id": "S4",
+      "speaker": "TOUDOU",
+      "kind": "dialogue",
+      "ja": "大切な顧客ですから、一人で大丈夫ですよ。",
+      "zh": "是重要的客户，你一个人没问题的。",
+      "romaji": "Taisetsu na kokyaku desu kara, hitori de daijōbu desu yo.",
+      "context": {
+        "zh": "藤堂笑着拍拍你的肩，眼神里闪过一丝不易察觉的算计。他没告诉你：这场面见客户，需要携伴出席。"
+      },
+      "objective": "拜访客户",
+      "learning_tags": [
+        "しごと"
+      ],
+      "asset_refs": [
+        "BG04_CLIENT",
+        "CH03_TOUDOU"
+      ],
+      "choices": [
+        {
+          "id": "c_up2",
+          "ja": "わかりました。",
+          "zh": "好的。",
+          "romaji": "Wakarimashita.",
+          "next": "s4_rejected",
+          "set": {},
+          "requires": {}
+        }
+      ],
+      "emotion": "scheming"
+    },
+    {
+      "id": "s4_rejected",
+      "scene_id": "S4",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "「お連れ様は？」と聞かれた。",
+      "zh": "对方问：\"您的同伴呢？\"",
+      "romaji": "「Otsuresama wa?」 to kikareta.",
+      "context": {
+        "zh": "前台礼貌地问你\"您的同伴呢？\"你愣住了。原来这是场需要携伴出席的商务见面。你一个人，被婉拒在门外。"
+      },
+      "objective": "理解被拒的原因",
+      "learning_tags": [
+        "くうきをよむ"
+      ],
+      "asset_refs": [
+        "BG22_RECEPTION"
+      ],
+      "choices": [
+        {
+          "id": "c_confused",
+          "ja": "どういうこと？",
+          "zh": "怎么回事？",
+          "romaji": "Dō iu koto?",
+          "next": "s4_aoi_explain",
+          "set": {},
+          "requires": {}
+        },
+        {
+          "id": "c_not_understand",
+          "ja": "わかりません。",
+          "zh": "我听不懂。",
+          "romaji": "Wakarimasen.",
+          "next": "s4_rejected_simple",
+          "set": {},
+          "requires": {}
+        }
+      ]
+    },
+    {
+      "id": "s4_rejected_simple",
+      "scene_id": "S4",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "同伴が、必要です。",
+      "zh": "需要同伴。",
+      "romaji": "Dōhan ga, hitsuyō desu.",
+      "context": {
+        "zh": "前台放慢语速，重复了一遍。"
+      },
+      "objective": "理解被拒的原因",
+      "learning_tags": [
+        "くうきをよむ"
+      ],
+      "asset_refs": [
+        "BG22_RECEPTION"
+      ],
+      "choices": [
+        {
+          "id": "c_ok",
+          "ja": "そうですか。",
+          "zh": "这样啊。",
+          "romaji": "Sō desu ka.",
+          "next": "s4_aoi_explain",
+          "set": {},
+          "requires": {}
+        }
+      ]
+    },
+    {
+      "id": "s4_aoi_explain",
+      "scene_id": "S4",
+      "speaker": "AOI",
+      "kind": "dialogue",
+      "ja": "あれ、藤堂さん、教えてなかったの？",
+      "zh": "咦，藤堂先生没告诉你吗？",
+      "romaji": "Are, Tōdō-san, oshietenakatta no?",
+      "context": {
+        "zh": "回到公司，葵听你说完，眉头皱了起来。她似乎察觉到了什么。"
+      },
+      "objective": "了解规矩",
+      "learning_tags": [
+        "くうきをよむ"
+      ],
+      "asset_refs": [
+        "BG02_OFFICE",
+        "CH02_AOI_CONSTRAINED"
+      ],
+      "choices": [
+        {
+          "id": "c_ask2",
+          "ja": "何のことですか？",
+          "zh": "什么意思？",
+          "romaji": "Nan no koto desu ka?",
+          "next": "s4_rule",
+          "set": {},
+          "requires": {}
+        }
+      ]
+    },
+    {
+      "id": "s4_rule",
+      "scene_id": "S4",
+      "speaker": "AOI",
+      "kind": "dialogue",
+      "ja": "この顧客は、パートナー同伴がルールなの。",
+      "zh": "这个客户，规矩是要带伴侣出席。",
+      "romaji": "Kono kokyaku wa, pātonā dōhan ga rūru na no.",
+      "context": {
+        "zh": "葵压低声音解释：和风堂社长看重\"信赖与家庭\"，谈生意前要一起参加招待会，得带伴侣，表示你是个稳定、可信赖的人。"
+      },
+      "objective": "记住规矩",
+      "learning_tags": [
+        "くうきをよむ",
+        "しごと"
+      ],
+      "asset_refs": [
+        "BG02_OFFICE",
+        "CH02_AOI_FIRM"
+      ],
+      "choices": [
+        {
+          "id": "c_understand",
+          "ja": "なるほど。",
+          "zh": "原来如此。",
+          "romaji": "Naruhodo.",
+          "next": "s4_end",
+          "set": {},
+          "requires": {}
+        },
+        {
+          "id": "c_worry",
+          "ja": "でも、恋人なんていない。",
+          "zh": "可我没有恋人。",
+          "romaji": "Demo, koibito nante inai.",
+          "next": "s4_end",
+          "set": {},
+          "requires": {}
+        }
+      ]
+    },
+    {
+      "id": "s4_end",
+      "scene_id": "S4",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "顧客を失いかけた。だが、これが罠だとは。",
+      "zh": "差点丢了客户。但你还不知道，这其实是个圈套。",
+      "romaji": "Kokyaku wo ushinaikaketa. Daga, kore ga wana da to wa.",
+      "context": {
+        "zh": "藤堂故意不告诉你规矩，让你当众出丑。他到底想干什么？"
+      },
+      "objective": "回到公司",
+      "learning_tags": [],
+      "asset_refs": [
+        "BG37_ALONE"
+      ],
+      "choices": [
+        {
+          "id": "c_next",
+          "ja": "次へ。",
+          "zh": "继续。",
+          "romaji": "Tsugi e.",
+          "next": "s5_explore",
+          "set": {},
+          "requires": {},
+          "functional": true
+        }
+      ]
+    },
+    {
+      "id": "s5_explore",
+      "scene_id": "S5",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "自由時間。何をしようか。",
+      "zh": "自由时间。做点什么呢？",
+      "romaji": "Jiyū jikan. Nani wo shiyō ka.",
+      "context": {
+        "zh": "被藤堂坑了一把，你回到公司，心里憋着一股火。下班后，你有了点自由时间——可以在东京逛逛透透气，也可以回办公室。"
+      },
+      "objective": "自由探索",
+      "learning_tags": [],
+      "asset_refs": [
+        "BG19_TOKYO_DUSK"
+      ],
+      "choices": [
+        {
+          "id": "c_office",
+          "ja": "会社に戻る。",
+          "zh": "回办公室。",
+          "romaji": "Kaisha ni modoru.",
+          "next": "s5_office",
+          "set": {},
+          "requires": {},
+          "functional": true
+        },
+        {
+          "id": "c_vending",
+          "ja": "自動販売機を見る。",
+          "zh": "看看自动贩卖机。",
+          "romaji": "Jidōhanbaiki wo miru.",
+          "next": "s5_vending",
+          "set": {},
+          "requires": {},
+          "functional": true
+        },
+        {
+          "id": "c_cafe",
+          "ja": "カフェに行く。",
+          "zh": "去咖啡厅。",
+          "romaji": "Kafe ni iku.",
+          "next": "s5_cafe",
+          "set": {},
+          "requires": {},
+          "functional": true
+        },
+        {
+          "id": "c_park",
+          "ja": "公園に行く。",
+          "zh": "去公园。",
+          "romaji": "Kōen ni iku.",
+          "next": "s5_park",
+          "set": {},
+          "requires": {},
+          "functional": true
+        },
+        {
+          "id": "c_shibuya",
+          "ja": "渋谷に行く。",
+          "zh": "去涩谷。",
+          "romaji": "Shibuya ni iku.",
+          "next": "s5_shibuya",
+          "set": {},
+          "requires": {},
+          "functional": true
+        },
+        {
+          "id": "c_continue",
+          "ja": "仕事に戻る。",
+          "zh": "回去工作。",
+          "romaji": "Shigoto ni modoru.",
+          "next": "s5_end",
+          "set": {},
+          "requires": {},
+          "functional": true
+        }
+      ]
+    },
+    {
+      "id": "s5_office",
+      "scene_id": "S5",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "残業している葵を見つけた。",
+      "zh": "发现了还在加班的葵。",
+      "romaji": "Zangyō shiteiru Aoi wo mitsuketa.",
+      "context": {
+        "zh": "葵还在加班，对着屏幕认真工作。"
+      },
+      "objective": "探索",
+      "learning_tags": [
+        "しごと"
+      ],
+      "asset_refs": [
+        "BG21_CUBICLE",
+        "CH02_AOI"
+      ],
+      "choices": [
+        {
+          "id": "c_greet",
+          "ja": "お疲れさまです。",
+          "zh": "辛苦了。",
+          "romaji": "Otsukaresama desu.",
+          "next": "s5_office_aoi",
+          "set": {},
+          "requires": {}
+        },
+        {
+          "id": "c_back",
+          "ja": "戻る。",
+          "zh": "回去。",
+          "romaji": "Modoru.",
+          "next": "s5_explore",
+          "set": {},
+          "requires": {},
+          "functional": true
+        }
+      ],
+      "on_enter": {
+        "append_explored_hotspots": "office"
+      }
+    },
+    {
+      "id": "s5_office_aoi",
+      "scene_id": "S5",
+      "speaker": "AOI",
+      "kind": "dialogue",
+      "ja": "お疲れさま！もう少しで終わります。",
+      "zh": "辛苦了！我快忙完了。",
+      "romaji": "Otsukaresama! Mō sukoshi de owarimasu.",
+      "context": {
+        "zh": "葵抬头对你笑。"
+      },
+      "objective": "探索",
+      "learning_tags": [
+        "しごと"
+      ],
+      "asset_refs": [
+        "BG21_CUBICLE",
+        "CH02_AOI"
+      ],
+      "choices": [
+        {
+          "id": "c_back2",
+          "ja": "戻る。",
+          "zh": "回去。",
+          "romaji": "Modoru.",
+          "next": "s5_explore",
+          "set": {},
+          "requires": {},
+          "functional": true
+        }
+      ]
+    },
+    {
+      "id": "s5_vending",
+      "scene_id": "S5",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "自動販売機。コーヒーを買った。",
+      "zh": "自动贩卖机。买了罐咖啡。",
+      "romaji": "Jidōhanbaiki. Koohī wo katta.",
+      "context": {
+        "zh": "东京的自动贩卖机随处可见。你投币，买了一罐热咖啡。"
+      },
+      "objective": "探索",
+      "learning_tags": [
+        "かいもの"
+      ],
+      "asset_refs": [
+        "BG08_VENDING"
+      ],
+      "choices": [
+        {
+          "id": "c_back3",
+          "ja": "戻る。",
+          "zh": "回去。",
+          "romaji": "Modoru.",
+          "next": "s5_explore",
+          "set": {},
+          "requires": {},
+          "functional": true
+        }
+      ],
+      "on_enter": {
+        "append_explored_hotspots": "vending"
+      }
+    },
+    {
+      "id": "s5_cafe",
+      "scene_id": "S5",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "静かなカフェに入った。",
+      "zh": "走进了一家安静的咖啡厅。",
+      "romaji": "Shizuka na kafe ni haitta.",
+      "context": {
+        "zh": "你点了杯咖啡，看着窗外东京的街景。"
+      },
+      "objective": "探索",
+      "learning_tags": [
+        "かいもの"
+      ],
+      "asset_refs": [
+        "BG07_CAFE"
+      ],
+      "choices": [
+        {
+          "id": "c_back4",
+          "ja": "戻る。",
+          "zh": "回去。",
+          "romaji": "Modoru.",
+          "next": "s5_explore",
+          "set": {},
+          "requires": {},
+          "functional": true
+        }
+      ],
+      "on_enter": {
+        "append_explored_hotspots": "cafe"
+      }
+    },
+    {
+      "id": "s5_park",
+      "scene_id": "S5",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "公園。桜の木があった。",
+      "zh": "公园。有棵樱花树。",
+      "romaji": "Kōen. Sakura no ki ga atta.",
+      "context": {
+        "zh": "不是花季，樱花树光秃秃的。你忽然想起「絆」里那个只有你知道的触发词——以及它召唤出的五瓣樱花签名。"
+      },
+      "objective": "探索",
+      "learning_tags": [],
+      "asset_refs": [
+        "BG06_PARK"
+      ],
+      "choices": [
+        {
+          "id": "c_back5",
+          "ja": "戻る。",
+          "zh": "回去。",
+          "romaji": "Modoru.",
+          "next": "s5_explore",
+          "set": {},
+          "requires": {},
+          "functional": true
+        }
+      ],
+      "on_enter": {
+        "append_explored_hotspots": "park"
+      }
+    },
+    {
+      "id": "s5_shibuya",
+      "scene_id": "S5",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "渋谷のスクランブル交差点。人、人、人。",
+      "zh": "涩谷的十字路口。人，人，人。",
+      "romaji": "Shibuya no sukuranburu kōsaten. Hito, hito, hito.",
+      "context": {
+        "zh": "著名的涩谷十字路口，人潮汹涌。你被淹没在东京的人流里。"
+      },
+      "objective": "探索",
+      "learning_tags": [],
+      "asset_refs": [
+        "BG05_SHIBUYA"
+      ],
+      "choices": [
+        {
+          "id": "c_back6",
+          "ja": "戻る。",
+          "zh": "回去。",
+          "romaji": "Modoru.",
+          "next": "s5_explore",
+          "set": {},
+          "requires": {},
+          "functional": true
+        }
+      ],
+      "on_enter": {
+        "append_explored_hotspots": "shibuya"
+      }
+    },
+    {
+      "id": "s5_end",
+      "scene_id": "S5",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "仕事に戻ることにした。",
+      "zh": "你决定回去工作。",
+      "romaji": "Shigoto ni modoru koto ni shita.",
+      "context": {
+        "zh": "自由时间结束了。更大的风暴，正在前方等着你。"
+      },
+      "objective": "回到工作",
+      "learning_tags": [],
+      "asset_refs": [
+        "BG02_OFFICE"
+      ],
+      "choices": [
+        {
+          "id": "c_next",
+          "ja": "次へ。",
+          "zh": "继续。",
+          "romaji": "Tsugi e.",
+          "next": "s6_demo",
+          "set": {},
+          "requires": {},
+          "functional": true
+        }
+      ]
+    },
+    {
+      "id": "s6_demo",
+      "scene_id": "S6",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "和風堂。重要なデモの日。",
+      "zh": "和风堂。关键演示的日子。",
+      "romaji": "Wafūdō. Jūyō na demo no hi.",
+      "context": {
+        "zh": "今天是向和风堂社长演示「絆」的日子。但藤堂抢在前面，说自己来演示。"
+      },
+      "objective": "看演示",
+      "learning_tags": [
+        "しごと"
+      ],
+      "asset_refs": [
+        "BG23_DEMO_ROOM"
+      ],
+      "choices": [
+        {
+          "id": "c_watch",
+          "ja": "見守る。",
+          "zh": "旁观。",
+          "romaji": "Mimamoru.",
+          "next": "s6_fail",
+          "set": {},
+          "requires": {},
+          "functional": true
+        }
+      ]
+    },
+    {
+      "id": "s6_fail",
+      "scene_id": "S6",
+      "speaker": "TOUDOU",
+      "kind": "dialogue",
+      "ja": "え、これは……なぜ動かない？",
+      "zh": "咦，这……怎么不动了？",
+      "romaji": "E, kore wa…… naze ugokanai?",
+      "context": {
+        "zh": "藤堂演示时，被社长问到一个技术细节。他支支吾吾答不上来，演示卡住了。他把你的成果说成自己的，却根本不懂它。"
+      },
+      "objective": "看演示翻车",
+      "learning_tags": [
+        "しごと"
+      ],
+      "asset_refs": [
+        "BG23_DEMO_ROOM",
+        "CH03_TOUDOU"
+      ],
+      "choices": [
+        {
+          "id": "c_silent",
+          "ja": "……",
+          "zh": "……",
+          "romaji": "……",
+          "next": "s6_blame",
+          "set": {},
+          "requires": {}
+        },
+        {
+          "id": "c_help",
+          "ja": "手伝います。",
+          "zh": "我来帮忙。",
+          "romaji": "Tetsudaimasu.",
+          "next": "s6_blame",
+          "set": {},
+          "requires": {}
+        }
+      ]
+    },
+    {
+      "id": "s6_blame",
+      "scene_id": "S6",
+      "speaker": "TOUDOU",
+      "kind": "dialogue",
+      "ja": "これは小光さんのデータが悪いんです。",
+      "zh": "这是小光的数据有问题。",
+      "romaji": "Kore wa Xiaoguang-san no dēta ga waruin desu.",
+      "context": {
+        "zh": "藤堂当着社长的面，把锅甩给了你：\"是他做的助手，但数据有问题，所以演示才失败。\"他笑得无辜，仿佛自己才是受害者。"
+      },
+      "objective": "面对甩锅",
+      "learning_tags": [
+        "ひてい"
+      ],
+      "asset_refs": [
+        "CG01_BACKSTAB"
+      ],
+      "choices": [
+        {
+          "id": "c_shock",
+          "ja": "え？",
+          "zh": "诶？",
+          "romaji": "E?",
+          "next": "s6_shock",
+          "set": {
+            "first_reaction": "shock"
+          },
+          "requires": {}
+        },
+        {
+          "id": "c_deny",
+          "ja": "ちがいます！",
+          "zh": "不是的！",
+          "romaji": "Chigaimasu!",
+          "next": "s6_deny",
+          "set": {
+            "first_reaction": "deny"
+          },
+          "requires": {}
+        }
+      ],
+      "emotion": "scheming"
+    },
+    {
+      "id": "s6_shock",
+      "scene_id": "S6",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "言葉が出なかった。",
+      "zh": "你一个字也说不出来。",
+      "romaji": "Kotoba ga denakatta.",
+      "context": {
+        "zh": "你想反驳，但日语堵在喉咙里。看着社长皱眉，你只能握紧拳头。"
+      },
+      "objective": "反驳",
+      "learning_tags": [
+        "ひてい"
+      ],
+      "asset_refs": [
+        "BG31_SHOCK"
+      ],
+      "choices": [
+        {
+          "id": "c_try",
+          "ja": "ち、ちがいます……",
+          "zh": "不、不是的……",
+          "romaji": "Chi, chigaimasu……",
+          "next": "s6_cannot_speak",
+          "set": {},
+          "requires": {}
+        }
+      ]
+    },
+    {
+      "id": "s6_deny",
+      "scene_id": "S6",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "ちがいます！それは……",
+      "zh": "不是的！那是……",
+      "romaji": "Chigaimasu! Sore wa……",
+      "context": {
+        "zh": "你急着反驳，但后面的日语说不出来。话卡在了一半。"
+      },
+      "objective": "反驳",
+      "learning_tags": [
+        "ひてい"
+      ],
+      "asset_refs": [
+        "BG32_DENY"
+      ],
+      "choices": [
+        {
+          "id": "c_stuck",
+          "ja": "……",
+          "zh": "……",
+          "romaji": "……",
+          "next": "s6_cannot_speak",
+          "set": {},
+          "requires": {}
+        }
+      ]
+    },
+    {
+      "id": "s6_cannot_speak",
+      "scene_id": "S6",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "日本語が、出てこない。",
+      "zh": "日语，说不出来。",
+      "romaji": "Nihongo ga, detekonai.",
+      "context": {
+        "zh": "你最需要说话的时候，却发现自己什么也说不出来。社长叹了口气，站了起来。"
+      },
+      "objective": "面对绝境",
+      "learning_tags": [
+        "ひてい"
+      ],
+      "asset_refs": [
+        "BG33_DESPAIR"
+      ],
+      "choices": [
+        {
+          "id": "c_look_aoi",
+          "ja": "葵を見る。",
+          "zh": "看向葵。",
+          "romaji": "Aoi wo miru.",
+          "next": "s6_aoi_look",
+          "set": {},
+          "requires": {},
+          "functional": true
+        }
+      ],
+      "emotion": "tense"
+    },
+    {
+      "id": "s6_aoi_look",
+      "scene_id": "S6",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "葵は、何かを言いたそうだった。",
+      "zh": "葵似乎想说什么。",
+      "romaji": "Aoi wa, nanika wo ītasō datta.",
+      "context": {
+        "zh": "葵看着你，嘴唇动了动，却最终没有出声。她不敢在社长面前顶撞藤堂——从小到大被要求的「读空气」，此刻像一根无形的绳，勒住了她的喉咙。"
+      },
+      "objective": "面对绝境",
+      "learning_tags": [],
+      "asset_refs": [
+        "BG04_CLIENT",
+        "CH02_AOI"
+      ],
+      "choices": [
+        {
+          "id": "c_end",
+          "ja": "会議が終わった。",
+          "zh": "会议结束了。",
+          "romaji": "Kaigi ga owatta.",
+          "next": "s6_end",
+          "set": {},
+          "requires": {},
+          "functional": true
+        }
+      ],
+      "emotion": "tense"
+    },
+    {
+      "id": "s6_end",
+      "scene_id": "S6",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "デモは失敗。責任は、あなたに。",
+      "zh": "演示失败。责任，落在了你头上。",
+      "romaji": "Demo wa shippai. Sekinin wa, anata ni.",
+      "context": {
+        "zh": "项目岌岌可危。你背上了\"数据有问题\"的黑锅，却连辩解的能力都没有。"
+      },
+      "objective": "面对结果",
+      "learning_tags": [],
+      "asset_refs": [
+        "BG34_BACKSTAB_END"
+      ],
+      "choices": [
+        {
+          "id": "c_next",
+          "ja": "次へ。",
+          "zh": "继续。",
+          "romaji": "Tsugi e.",
+          "next": "s7_alone",
+          "set": {},
+          "requires": {},
+          "functional": true
+        }
+      ]
+    },
+    {
+      "id": "s7_alone",
+      "scene_id": "S7",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "一人、会社の窓の外を見ていた。",
+      "zh": "一个人，看着公司的窗外。",
+      "romaji": "Hitori, kaisha no mado no soto wo miteita.",
+      "context": {
+        "zh": "会议结束后，你一个人站在窗前。东京的夜色，第一次让你觉得如此冰冷。"
+      },
+      "objective": "整理情绪",
+      "learning_tags": [],
+      "asset_refs": [
+        "BG09_WINDOW_NIGHT"
+      ],
+      "choices": [
+        {
+          "id": "c_think",
+          "ja": "考える。",
+          "zh": "思考。",
+          "romaji": "Kangaeru.",
+          "next": "s7_try",
+          "set": {},
+          "requires": {},
+          "functional": true
+        }
+      ],
+      "emotion": "tense"
+    },
+    {
+      "id": "s7_try",
+      "scene_id": "S7",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "説明しようと、言葉を探した。",
+      "zh": "想解释，却找不到词。",
+      "romaji": "Setsumei shiyō to, kotoba wo sagashita.",
+      "context": {
+        "zh": "你想去找社长解释：演示失败是藤堂不懂操作，不是你的数据问题。但日语水平，撑不起你的辩解。"
+      },
+      "objective": "找到自证的方法",
+      "learning_tags": [
+        "ひてい"
+      ],
+      "asset_refs": [
+        "BG20_HALLWAY"
+      ],
+      "choices": [
+        {
+          "id": "c_practice",
+          "ja": "「ちがいます」を練習する。",
+          "zh": "练习说\"不是的\"。",
+          "romaji": "「Chigaimasu」 wo renshū suru.",
+          "next": "s7_practice",
+          "set": {},
+          "requires": {},
+          "functional": true
+        },
+        {
+          "id": "c_not_understand",
+          "ja": "わかりません。",
+          "zh": "我不知道该怎么办。",
+          "romaji": "Wakarimasen.",
+          "next": "s7_aoi_help",
+          "set": {},
+          "requires": {}
+        }
+      ]
+    },
+    {
+      "id": "s7_practice",
+      "scene_id": "S7",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "「ちがいます。私のデータは正しいです。」",
+      "zh": "「不是的。我的数据是正确的。」",
+      "romaji": "「Chigaimasu. Watashi no dēta wa tadashī desu.」",
+      "context": {
+        "zh": "你对着镜子，一遍遍练习这句日语。但你知道，光靠这一句，证明不了什么。"
+      },
+      "objective": "练习辩解",
+      "learning_tags": [
+        "ひてい"
+      ],
+      "asset_refs": [
+        "BG11_MIRROR"
+      ],
+      "choices": [
+        {
+          "id": "c_sigh",
+          "ja": "ため息をつく。",
+          "zh": "叹了口气。",
+          "romaji": "Tameiki wo tsuku.",
+          "next": "s7_aoi_help",
+          "set": {},
+          "requires": {},
+          "functional": true
+        }
+      ]
+    },
+    {
+      "id": "s7_aoi_help",
+      "scene_id": "S7",
+      "speaker": "AOI",
+      "kind": "dialogue",
+      "ja": "小光さん……私、何かできること、ありますか？",
+      "zh": "小光……我，有什么能帮你的吗？",
+      "romaji": "Xiaoguang-san…… watashi, nanika dekiru koto, arimasu ka?",
+      "context": {
+        "zh": "葵找到你，眼里是掩不住的内疚。她想帮你，但在论资排辈的职场里，顶撞前辈藤堂，需要巨大的勇气。"
+      },
+      "objective": "回应葵",
+      "learning_tags": [
+        "かんけい"
+      ],
+      "asset_refs": [
+        "BG02_OFFICE",
+        "CH02_AOI_CONSTRAINED"
+      ],
+      "choices": [
+        {
+          "id": "c_trust",
+          "ja": "助けてほしい。",
+          "zh": "我需要你帮我。",
+          "romaji": "Tasukete hoshī.",
+          "next": "s7_aoi_conflict",
+          "set": {
+            "trust_aoi": "trust"
+          },
+          "requires": {}
+        },
+        {
+          "id": "c_alone",
+          "ja": "一人で大丈夫。",
+          "zh": "我一个人没事。",
+          "romaji": "Hitori de daijōbu.",
+          "next": "s7_aoi_conflict",
+          "set": {
+            "trust_aoi": "alone"
+          },
+          "requires": {}
+        }
+      ],
+      "emotion": "constrained"
+    },
+    {
+      "id": "s7_aoi_conflict",
+      "scene_id": "S7",
+      "speaker": "AOI",
+      "kind": "dialogue",
+      "ja": "私……空気を読まなきゃって、ずっと思ってた。",
+      "zh": "我……一直觉得，必须要读空气。",
+      "romaji": "Watashi…… kūki wo yomanakya tte, zutto omotteta.",
+      "context": {
+        "zh": "葵的声音低了下去。她第一次提起自己：从小就被要求「读空气」，在女校、在职场，她永远是那个察言观色、委屈自己的人。演示那天，她明明看见藤堂在撒谎，却不敢当众戳穿——她恨自己这份「读空气」。活泼开朗，是她给自己戴上的面具。"
+      },
+      "objective": "听葵的心声",
+      "learning_tags": [
+        "くうきをよむ",
+        "かんけい"
+      ],
+      "asset_refs": [
+        "BG02_OFFICE",
+        "CH02_AOI_DOWN"
+      ],
+      "choices": [
+        {
+          "id": "c_listen",
+          "ja": "聞く。",
+          "zh": "倾听。",
+          "romaji": "Kiku.",
+          "next": "s7_end",
+          "set": {},
+          "requires": {},
+          "functional": true
+        }
+      ],
+      "emotion": "down"
+    },
+    {
+      "id": "s7_end",
+      "scene_id": "S7",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "決めた。自分の手で、証明する。",
+      "zh": "决定了。用自己的手，去证明。",
+      "romaji": "Kimeta. Jibun no te de, shōmei suru.",
+      "context": {
+        "zh": "你下定决心：要拿下和风堂，证明自己。而唯一的办法，是那场需要携伴出席的招待会。"
+      },
+      "objective": "下定决心",
+      "learning_tags": [],
+      "asset_refs": [
+        "BG38_RESOLVE"
+      ],
+      "choices": [
+        {
+          "id": "c_next",
+          "ja": "次へ。",
+          "zh": "继续。",
+          "romaji": "Tsugi e.",
+          "next": "s8_plan",
+          "set": {},
+          "requires": {},
+          "functional": true
+        }
+      ]
+    },
+    {
+      "id": "s8_plan",
+      "scene_id": "S8",
+      "speaker": "AOI",
+      "kind": "dialogue",
+      "ja": "小光さん、いい方法があります。",
+      "zh": "小光，我有个好办法。",
+      "romaji": "Xiaoguang-san, ī hōhō ga arimasu.",
+      "context": {
+        "zh": "葵走到你面前，眼神坚定，却又有点紧张。上次去和风堂，你因为孤身一人、没有同伴，被拦在门外。葵想出了一个办法，帮你在招待会上扳回这一局。"
+      },
+      "objective": "听葵的提议",
+      "learning_tags": [
+        "ていあん"
+      ],
+      "asset_refs": [
+        "BG02_OFFICE",
+        "CH02_AOI_FIRM"
+      ],
+      "choices": [
+        {
+          "id": "c_ask",
+          "ja": "何ですか？",
+          "zh": "什么办法？",
+          "romaji": "Nan desu ka?",
+          "next": "s8_explain",
+          "set": {},
+          "requires": {}
+        }
+      ]
+    },
+    {
+      "id": "s8_explain",
+      "scene_id": "S8",
+      "speaker": "AOI",
+      "kind": "dialogue",
+      "ja": "恋人のふりをして、招待会に出ましょう。",
+      "zh": "我们假扮恋人，去参加招待会吧。",
+      "romaji": "Koibito no furi wo shite, shōtaikai ni demashō.",
+      "context": {
+        "zh": "葵解释：和风堂社长最看重「信赖与家庭」，谈生意的人都得带伴侣出席招待会，证明自己是个稳定、可信的人。她愿意扮成你的恋人陪你一起去——这样你能见到社长，当面证明「絆」是你做的。"
+      },
+      "objective": "考虑提议",
+      "learning_tags": [
+        "ていあん"
+      ],
+      "asset_refs": [
+        "BG02_OFFICE",
+        "CH02_AOI_FIRM"
+      ],
+      "choices": [
+        {
+          "id": "c_agree",
+          "ja": "わかりました。やります。",
+          "zh": "好，我干。",
+          "romaji": "Wakarimashita. Yarimasu.",
+          "next": "s8_agree",
+          "set": {
+            "contract_made": true
+          },
+          "requires": {}
+        },
+        {
+          "id": "c_hesitate",
+          "ja": "でも、いいんですか？",
+          "zh": "但这样真的好吗？",
+          "romaji": "Demo, īn desu ka?",
+          "next": "s8_hesitate",
+          "set": {},
+          "requires": {}
+        }
+      ],
+      "emotion": "firm"
+    },
+    {
+      "id": "s8_hesitate",
+      "scene_id": "S8",
+      "speaker": "AOI",
+      "kind": "dialogue",
+      "ja": "私は、小光さんを信じてます。だから。",
+      "zh": "我相信小光。所以，没关系的。",
+      "romaji": "Watashi wa, Xiaoguang-san wo shinjitemasu. Dakara.",
+      "context": {
+        "zh": "葵的声音很轻，但很坚定。这是她第一次，为了谁，违背\"读空气\"的生存法则。"
+      },
+      "objective": "考虑提议",
+      "learning_tags": [
+        "かんけい"
+      ],
+      "asset_refs": [
+        "BG02_OFFICE",
+        "CH02_AOI_FIRM"
+      ],
+      "choices": [
+        {
+          "id": "c_agree2",
+          "ja": "わかりました。",
+          "zh": "好。",
+          "romaji": "Wakarimashita.",
+          "next": "s8_agree",
+          "set": {
+            "contract_made": true
+          },
+          "requires": {}
+        }
+      ]
+    },
+    {
+      "id": "s8_agree",
+      "scene_id": "S8",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "こうして、二人の「契約」が始まった。",
+      "zh": "就这样，两人的「契约」开始了。",
+      "romaji": "Kōshite, futari no「keiyaku」 ga hajimatta.",
+      "context": {
+        "zh": "你们约定：在招待会上，以恋人身份出场。为了证明清白，也为了……一点说不清的东西。"
+      },
+      "objective": "准备招待会",
+      "learning_tags": [
+        "ていあん"
+      ],
+      "asset_refs": [
+        "BG02_OFFICE",
+        "CH02_AOI"
+      ],
+      "choices": [
+        {
+          "id": "c_next",
+          "ja": "次へ。",
+          "zh": "继续。",
+          "romaji": "Tsugi e.",
+          "next": "s8_practice",
+          "set": {},
+          "requires": {},
+          "functional": true
+        }
+      ]
+    },
+    {
+      "id": "s8_practice",
+      "scene_id": "S8",
+      "speaker": "AOI",
+      "kind": "dialogue",
+      "ja": "じゃあ、練習しましょう。まず、名前の呼び方！",
+      "zh": "那么，来练习吧。首先，是称呼！",
+      "romaji": "Jā, renshū shimashō. Mazu, namae no yobikata!",
+      "context": {
+        "zh": "葵认真起来，教你招待会上要用的话：怎么称呼对方、怎么介绍\"恋人\"、怎么自然地挽着手。"
+      },
+      "objective": "练习",
+      "learning_tags": [
+        "よびかた"
+      ],
+      "asset_refs": [
+        "BG12_PRACTICE",
+        "CH02_AOI"
+      ],
+      "choices": [
+        {
+          "id": "c_call",
+          "ja": "葵……さん？",
+          "zh": "葵……小姐？",
+          "romaji": "Aoi…… san?",
+          "next": "s8_practice2",
+          "set": {},
+          "requires": {}
+        },
+        {
+          "id": "c_call2",
+          "ja": "葵。葵って呼ぶ。",
+          "zh": "葵。我叫你葵。",
+          "romaji": "Aoi. Aoi tte yobu.",
+          "next": "s8_warm",
+          "set": {},
+          "requires": {}
+        }
+      ]
+    },
+    {
+      "id": "s8_practice2",
+      "scene_id": "S8",
+      "speaker": "AOI",
+      "kind": "dialogue",
+      "ja": "ふふ、呼び捨てでいいよ。",
+      "zh": "呵呵，直接叫我名字就好。",
+      "romaji": "Fufu, yobisute de ī yo.",
+      "context": {
+        "zh": "葵笑了，说在日本，恋人之间会直接叫名字，不加敬称。"
+      },
+      "objective": "练习",
+      "learning_tags": [
+        "よびかた"
+      ],
+      "asset_refs": [
+        "BG12_PRACTICE",
+        "CH02_AOI"
+      ],
+      "choices": [
+        {
+          "id": "c_ok",
+          "ja": "葵。よろしく。",
+          "zh": "葵。请多指教。",
+          "romaji": "Aoi. Yoroshiku.",
+          "next": "s8_warm",
+          "set": {},
+          "requires": {}
+        }
+      ],
+      "emotion": "cheerful"
+    },
+    {
+      "id": "s8_warm",
+      "scene_id": "S8",
+      "speaker": "AOI",
+      "kind": "dialogue",
+      "ja": "……本当の恋人みたいだね。",
+      "zh": "……真像真的恋人呢。",
+      "romaji": "…… Hontō no koibito mitai da ne.",
+      "context": {
+        "zh": "葵小声说，耳根有点红。空气里，多了一丝说不清的温度。"
+      },
+      "objective": "和葵在一起",
+      "learning_tags": [
+        "かんけい"
+      ],
+      "asset_refs": [
+        "BG02_OFFICE",
+        "CH02_AOI_SHY"
+      ],
+      "choices": [
+        {
+          "id": "c_smile",
+          "ja": "そうだね。",
+          "zh": "是啊。",
+          "romaji": "Sō da ne.",
+          "next": "s8_end",
+          "set": {},
+          "requires": {}
+        },
+        {
+          "id": "c_shy",
+          "ja": "……",
+          "zh": "……",
+          "romaji": "……",
+          "next": "s8_end",
+          "set": {},
+          "requires": {}
+        }
+      ],
+      "emotion": "shy"
+    },
+    {
+      "id": "s8_end",
+      "scene_id": "S8",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "招待会の日が、近づいてくる。",
+      "zh": "招待会的日子，越来越近了。",
+      "romaji": "Shōtaikai no hi ga, chikazuite kuru.",
+      "context": {
+        "zh": "你们约好时间。成败，就在这一场。你摸了摸口袋里的手机——里面存着那个只有你知道的触发词。藤堂抢走了「絆」，却永远不知道这个署名的秘密。"
+      },
+      "objective": "等待招待会",
+      "learning_tags": [],
+      "asset_refs": [
+        "BG39_SECRET"
+      ],
+      "choices": [
+        {
+          "id": "c_next",
+          "ja": "次へ。",
+          "zh": "继续。",
+          "romaji": "Tsugi e.",
+          "next": "s9_party",
+          "set": {},
+          "requires": {},
+          "functional": true
+        }
+      ]
+    },
+    {
+      "id": "s9_party",
+      "scene_id": "S9",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "和風堂の招待会。",
+      "zh": "和风堂的招待会。",
+      "romaji": "Wafūdō no shōtaikai.",
+      "context": {
+        "zh": "你和葵挽着手走进会场。社长在和风堂的庭院里，正和宾客寒暄。"
+      },
+      "objective": "出席招待会",
+      "learning_tags": [],
+      "asset_refs": [
+        "BG13_GARDEN",
+        "CH02_AOI"
+      ],
+      "choices": [
+        {
+          "id": "c_greet",
+          "ja": "こんばんは。",
+          "zh": "晚上好。",
+          "romaji": "Konbanwa.",
+          "next": "s9_shachou",
+          "set": {},
+          "requires": {}
+        }
+      ]
+    },
+    {
+      "id": "s9_shachou",
+      "scene_id": "S9",
+      "speaker": "SHACHOU",
+      "kind": "dialogue",
+      "ja": "お二人は、恋人同士ですと。",
+      "zh": "听说二位，是恋人。",
+      "romaji": "Ofutari wa, koibito dōshi desu to.",
+      "context": {
+        "zh": "社长打量着你们。他的眼神很和蔼，但藏着生意人的精明。他看向你的眼神，仍带着一丝上次演示失败的疑虑。"
+      },
+      "objective": "赢得社长信任",
+      "learning_tags": [
+        "じこしょうかい"
+      ],
+      "asset_refs": [
+        "BG13_GARDEN",
+        "CH04_SHACHOU"
+      ],
+      "choices": [
+        {
+          "id": "c_intro",
+          "ja": "はい。恋人です。",
+          "zh": "是的，我们是恋人。",
+          "romaji": "Hai. Koibito desu.",
+          "next": "s9_reveal",
+          "set": {},
+          "requires": {}
+        }
+      ]
+    },
+    {
+      "id": "s9_reveal",
+      "scene_id": "S9",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "「すみません。本当のことを、話させてください。」",
+      "zh": "「抱歉。请让我说出真相。」",
+      "romaji": "「Sumimasen. Hontō no koto wo, hanasasete kudasai.」",
+      "context": {
+        "zh": "你鼓起勇气，当众开口。你走到演示屏前，当着所有人的面，在「絆」里敲下那个只有你知道的触发词——海报角落，五瓣樱花安静地绽放了。这是你藏在代码里的署名，藤堂偷走了系统，却偷不走这个秘密。"
+      },
+      "objective": "当众证明",
+      "learning_tags": [
+        "はんてん"
+      ],
+      "asset_refs": [
+        "BG04_CLIENT",
+        "CG02_REVERSAL"
+      ],
+      "choices": [
+        {
+          "id": "c_show",
+          "ja": "これが、私が作った証拠です。",
+          "zh": "这就是我做的证据。",
+          "romaji": "Kore ga, watashi ga tsukutta shōko desu.",
+          "next": "s9_proof",
+          "set": {},
+          "requires": {}
+        }
+      ]
+    },
+    {
+      "id": "s9_proof",
+      "scene_id": "S9",
+      "speaker": "SHACHOU",
+      "kind": "dialogue",
+      "ja": "なるほど。……あなたでしたか。",
+      "zh": "原来如此。……原来是你啊。",
+      "romaji": "Naruhodo.…… anata deshita ka.",
+      "context": {
+        "zh": "社长看着那朵五瓣樱花，眼神变了。藤堂演示了这么多遍，海报上从没有过这朵花——因为他根本不知道那个触发词。他明白了：真正做出「絆」的人，是你。"
+      },
+      "objective": "获得认可",
+      "learning_tags": [
+        "はんてん"
+      ],
+      "asset_refs": [
+        "BG13_GARDEN",
+        "CH04_SHACHOU"
+      ],
+      "choices": [
+        {
+          "id": "c_next",
+          "ja": "次へ。",
+          "zh": "继续。",
+          "romaji": "Tsugi e.",
+          "next": "s9_toudou_exposed",
+          "set": {},
+          "requires": {},
+          "functional": true
+        }
+      ]
+    },
+    {
+      "id": "s9_toudou_exposed",
+      "scene_id": "S9",
+      "speaker": "TOUDOU",
+      "kind": "dialogue",
+      "ja": "藤堂さん、これはどういうことですか？",
+      "zh": "藤堂先生，这是怎么回事？",
+      "romaji": "Tōdō-san, kore wa dō iu koto desu ka?",
+      "context": {
+        "zh": "社长的目光转向藤堂。藤堂的笑容僵在脸上，第一次，那副笑面虎的面具裂开了。"
+      },
+      "objective": "看着藤堂",
+      "learning_tags": [
+        "はんてん"
+      ],
+      "asset_refs": [
+        "BG13_GARDEN",
+        "CH03_TOUDOU"
+      ],
+      "choices": [
+        {
+          "id": "c_watch",
+          "ja": "見つめる。",
+          "zh": "注视。",
+          "romaji": "Mitsumeru.",
+          "next": "s9_aoi_truth",
+          "set": {},
+          "requires": {},
+          "functional": true
+        }
+      ]
+    },
+    {
+      "id": "s9_aoi_truth",
+      "scene_id": "S9",
+      "speaker": "AOI",
+      "kind": "dialogue",
+      "ja": "小光さん、私……空気を読むの、もう疲れた。",
+      "zh": "小光，我……读空气，已经累了。",
+      "romaji": "Xiaoguang-san, watashi…… kūki wo yomu no, mō tsukareta.",
+      "context": {
+        "zh": "散场后，葵在庭院里对你说：她一直活得很累，读空气、讨好、委屈自己。是你这个\"完全不会读空气\"的人，让她第一次觉得，原来不用读空气，也可以被接纳。"
+      },
+      "objective": "回应葵",
+      "learning_tags": [
+        "くうきをよむ",
+        "かんけい"
+      ],
+      "asset_refs": [
+        "BG40_GARDEN_NIGHT",
+        "CH02_AOI_RELIEF"
+      ],
+      "choices": [
+        {
+          "id": "c_save",
+          "ja": "葵は、そのままでいい。",
+          "zh": "葵，做你自己就好。",
+          "romaji": "Aoi wa, sono mama de ī.",
+          "next": "s9_aoi_save",
+          "set": {},
+          "requires": {}
+        }
+      ],
+      "emotion": "relieved"
+    },
+    {
+      "id": "s9_aoi_save",
+      "scene_id": "S9",
+      "speaker": "NARRATOR",
+      "kind": "dialogue",
+      "ja": "葵の笑顔が、初めて、本当のものになった。",
+      "zh": "葵的笑容，第一次，变成了真的。",
+      "romaji": "Aoi no egao ga, hajimete, hontō no mono ni natta.",
+      "context": {
+        "zh": "葵笑了。这一次，不是保护色，不是面具。是这个不懂读空气的北京直男，教会了她：有些人，不需要你读空气。"
+      },
+      "objective": "和葵在一起",
+      "learning_tags": [
+        "かんけい"
+      ],
+      "asset_refs": [
+        "BG13_GARDEN",
+        "CH02_AOI_RELIEF"
+      ],
+      "choices": [
+        {
+          "id": "c_next",
+          "ja": "次へ。",
+          "zh": "继续。",
+          "romaji": "Tsugi e.",
+          "next": "end",
+          "set": {},
+          "requires": {},
+          "functional": true
+        }
+      ]
+    },
+    {
+      "id": "end",
+      "scene_id": "S9",
+      "speaker": "NARRATOR",
+      "kind": "end",
+      "ja": "東京での物語は、まだ始まったばかりだ。",
+      "zh": "东京的故事，才刚刚开始。",
+      "romaji": "Tōkyō de no monogatari wa, mada hajimatta bakari da.",
+      "context": {
+        "zh": "\"数据有问题\"的真相水落石出，藤堂的野心暴露。但更大的风暴，还在前方——你和葵的关系，也将走向新的篇章。"
+      },
+      "objective": "",
+      "learning_tags": [],
+      "asset_refs": [
+        "CG02_REVERSAL"
+      ],
+      "choices": []
+    }
+  ]
+}
